@@ -19,7 +19,7 @@ class Request:
         header = {'Content-Type': 'application/json'}
         resp = requests.post(url, headers=header, data=request_body)
 
-        return str(resp.text)
+        return json.loads(resp.text)
 
 
         
